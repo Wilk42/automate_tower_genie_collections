@@ -26,3 +26,4 @@ repos:
         always_run: true
         entry: >-
           ansible-lint -vp -c .github/workflow-config/.ansiblelint.yml
+          --exclude=.github/workflows/
