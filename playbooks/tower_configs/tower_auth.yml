@@ -1,5 +1,5 @@
 # User may add tower auth creds to this file and encrypt it using `ansible-vault`
 ---
-tower_hostname: ansible-tower-web-svc-test-project.example.com
+tower_hostname: https://awx-web-svc-lab-awx.apps-crc.testing
 tower_username: admin
-tower_password: changeme
+tower_password: password

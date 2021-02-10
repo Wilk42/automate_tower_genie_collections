@@ -5,9 +5,12 @@
   vars:
     tower_validate_certs: false
   # Define following vars here, or in tower_configs/tower_auth.yml
-  # tower_hostname: ansible-tower-web-svc-test-project.example.com
-  # tower_username: admin
-  # tower_password: changeme
+    tower_hostname: https://awx-web-svc-lab-awx.apps-crc.testing
+    tower_username: admin
+    tower_password: password
+  collections:
+    - awx.awx
+    - redhat_cop.tower_configuration
   pre_tasks:
     - name: Include vars from tower_configs directory
       include_vars:
@@ -17,7 +20,7 @@
       tags:
         - always
   roles:
-    - {role: license, when: tower_license is defined, tags: tower_license}
+#    - {role: license, when: tower_license is defined, tags: tower_license}
     - {role: tower_settings, when: tower_settings is defined, tags: tower_settings}
     - {role: organizations, when: tower_organizations is defined, tags: organizations}
     - {role: labels, when: tower_labels is defined, tags: labels}
