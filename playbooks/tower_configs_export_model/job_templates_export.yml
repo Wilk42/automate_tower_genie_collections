@@ -8,7 +8,9 @@ tower_templates:
     forks: 0
     limit: ''
     verbosity: 0
-    extra_vars: '{"empty_var": "nothing"}'
+    extra_vars: '{"stateless_inventory": true, "stateless_hosts": [{"hostname": "wqya1062.net.intra.laposte.fr",
+    "name": "wqya1062", "groups": "stateless", "device_type": "Operating System",
+    "user": "root"}]}'
     job_tags: ''
     force_handlers: false
     skip_tags: ''
